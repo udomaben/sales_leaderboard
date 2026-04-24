@@ -1,93 +1,74 @@
-/* Base styles */
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
-  color: #ffffff;
+  color: #fff;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* Header */
 header {
   text-align: center;
-  margin-bottom: 30px;
+  flex: 0 0 auto;
+  margin-bottom: 20px;
 }
 
 header h1 {
-  font-size: 28px;
-  letter-spacing: 6px;
-  font-weight: 700;
-  margin: 0;
-  color: #ffffff;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  font-size: 32px;
+  letter-spacing: 5px;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.6);
 }
 
 header p {
   font-size: 14px;
-  color: #aaaaaa;
-  margin-top: 6px;
+  color: #aaa;
 }
 
-/* Drag & Drop zone */
 #dropzone {
-  border: 2px dashed #444;
+  flex: 0 0 auto;
+  border: 2px dashed #555;
+  border-radius: 16px;
   padding: 40px;
   text-align: center;
-  margin-bottom: 40px;
+  color: #999;
   font-size: 16px;
-  color: #888;
+  background: rgba(255,255,255,0.02);
   transition: all 0.3s ease;
-  border-radius: 12px;
-  background-color: rgba(255,255,255,0.03);
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 600px;
+  align-self: center;
 }
 
 #dropzone.dragover {
   border-color: #22c55e;
   color: #22c55e;
   background-color: rgba(34,197,94,0.05);
-  box-shadow: 0 0 20px rgba(34,197,94,0.3);
+  box-shadow: 0 0 30px rgba(34,197,94,0.3);
 }
 
-/* Chart container */
 #chart {
-  height: 500px;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-  background: linear-gradient(to bottom, #0a0a0a, #111);
-  padding: 20px;
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;   /* prevent horizontal scroll */
 }
 
-/* Tooltip styling */
-.highcharts-tooltip text {
-  font-size: 12px !important;
-  fill: #fff !important;
-}
-
-/* X-axis labels */
-.highcharts-xaxis-labels text {
-  font-size: 12px;
-  fill: #ccc;
-}
-
-/* Y-axis labels */
-.highcharts-yaxis-labels text {
-  fill: #888;
-  font-size: 12px;
-}
-
-/* Column styling (if you want to customize per bar) */
-.highcharts-point {
-  stroke-width: 0;
-  border-radius: 4px;
-}
-
-/* Hover effect */
-.highcharts-point:hover {
-  opacity: 0.85;
-  cursor: pointer;
-}
+.highcharts-background { fill: #111 !important; }
+.highcharts-tooltip text { fill: #fff !important; font-size: 13px; }
+.highcharts-xaxis-labels text { fill: #ccc; font-size: 13px; }
+.highcharts-yaxis-labels text { fill: #888; font-size: 13px; }
+.highcharts-point { stroke-width:0; border-radius:5px; transition: all 0.3s ease; }
+.highcharts-point:hover { opacity:0.85; cursor:pointer; }
