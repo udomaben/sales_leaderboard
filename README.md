@@ -86,6 +86,13 @@ Frontend uses CDN:
 
 ---
 
+## Screenshot
+
+![Sales Leaderboard Screenshot](screenshot.png)
+
+---
+
+
 ## Notes
 
 - sales.csv is auto-generated → do not commit
