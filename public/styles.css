@@ -1,0 +1,93 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 28px;
+  letter-spacing: 6px;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+header p {
+  font-size: 14px;
+  color: #aaaaaa;
+  margin-top: 6px;
+}
+
+/* Drag & Drop zone */
+#dropzone {
+  border: 2px dashed #444;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 16px;
+  color: #888;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  background-color: rgba(255,255,255,0.03);
+}
+
+#dropzone.dragover {
+  border-color: #22c55e;
+  color: #22c55e;
+  background-color: rgba(34,197,94,0.05);
+  box-shadow: 0 0 20px rgba(34,197,94,0.3);
+}
+
+/* Chart container */
+#chart {
+  height: 500px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  background: linear-gradient(to bottom, #0a0a0a, #111);
+  padding: 20px;
+}
+
+/* Tooltip styling */
+.highcharts-tooltip text {
+  font-size: 12px !important;
+  fill: #fff !important;
+}
+
+/* X-axis labels */
+.highcharts-xaxis-labels text {
+  font-size: 12px;
+  fill: #ccc;
+}
+
+/* Y-axis labels */
+.highcharts-yaxis-labels text {
+  fill: #888;
+  font-size: 12px;
+}
+
+/* Column styling (if you want to customize per bar) */
+.highcharts-point {
+  stroke-width: 0;
+  border-radius: 4px;
+}
+
+/* Hover effect */
+.highcharts-point:hover {
+  opacity: 0.85;
+  cursor: pointer;
+}
