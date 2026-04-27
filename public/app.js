@@ -125,6 +125,7 @@ function renderChart(data){
         yAxis: {
             title: { text:'Sales' },
             max: maxSales,
+            allowDecimals: false,
             gridLineColor:'#222',
             labels: { style:{ color:'#888' } }
         },
